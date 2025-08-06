@@ -1,0 +1,148 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.nickname-bar {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.nickname-bar input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.nickname-bar button {
+  padding: 8px 16px;
+  background-color: #4c8bf5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nickname-bar button:hover {
+  background-color: #3a6dd7;
+}
+
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 메시지 공통 */
+.message {
+  display: inline-block;
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-break: break-word;
+  position: relative;
+}
+
+/* 사용자 메시지 (오른쪽) */
+.message.user {
+  background-color: #ffe812;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+  margin-right: 6px;
+}
+
+.message.user::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #ffe812;
+  border-bottom: 8px solid transparent;
+}
+
+/* 봇 메시지 (왼쪽) */
+.message.bot {
+  background-color: #e5e5e5;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  margin-left: 6px;
+}
+
+.message.bot::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #e5e5e5;
+  border-bottom: 8px solid transparent;
+}
+
+/* 이미지 메시지 */
+.message img {
+  max-width: 250px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+/* 입력창 */
+.input-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-bar input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.input-bar input[type="file"] {
+  display: none; /* 숨기고 라벨로 대체 */
+}
+
+.input-bar button {
+  padding: 8px 16px;
+  background-color: #4c8bf5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-bar button:hover {
+  background-color: #3a6dd7;
+}
+
+/* 이미지 업로드 버튼 라벨 스타일 */
+.upload-label {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
